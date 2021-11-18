@@ -1,14 +1,15 @@
 const startBtn = document.querySelector("[data-start]");
 const stopBtn = document.querySelector("[data-stop]");
-
 let timer;
 
 startBtn.addEventListener("click", () => {
   timer = setInterval(() => {
-    let bgColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-    document.querySelector("body").style.backgroundColor = bgColor;
-    return;
-  }, 500);
+    return (document.querySelector(
+      "body"
+    ).style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(
+      16
+    )}`);
+  }, 1000);
 });
 
 stopBtn.addEventListener("click", () => {
